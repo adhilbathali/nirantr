@@ -1,141 +1,65 @@
-/* Basic styles for the entire body */
-body {
-    font-family: 'Arial', sans-serif; /* Choose a suitable font */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333; /* Dark gray text color */
-}
-
-/* Style the main content wrapper */
-.content-wrapper {
-    max-width: 960px; /* Set a maximum width for the content */
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
-}
-
-
-/* Styles for the services hero section */
-#services-hero {
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 40px 0; /* Add top/bottom padding */
-    text-align: center; /* Center the text */
-
-}
-
-
-#services-hero .hero-content{
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-
-#services-hero h1 {
-    font-size: 2.5em;
+body{
     color: #333;
-    margin-bottom: 10px;
 }
 
-#services-hero p {
-    font-size: 1.2em;
-    color: #333; /* Slightly lighter gray for the paragraph */
-
+.service-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    padding-bottom: 0;
 }
 
-
-/* Styles for the main services section */
-#services-main {
-    padding: 40px 0; /* Top/bottom padding */
-
+.servies-heading{
+    font-size: 40px;
 }
 
+.service-header p{
+    width: 60vw;
+    line-height: 1.6rem;
+}
 
+.services-boxes-container{
+    display: grid;
+    padding: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-#services-main h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px; /* Add some spacing below the heading */
+.services-boxes-container .service-box{
+    background-color: #005F3A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 5px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#services-main p {
-    margin-bottom: 20px;
+@media (max-width: 600px) {
+    .service-box {
+        height: 80px;
+        font-size: 0.9rem;
+    }
 }
 
-
-
-/* Styles for service categories */
-.service-category {
-    margin-bottom: 40px; /* Add space between categories */
-
+.service-box  .img-place_holder{
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
 }
 
-
-
-.service-category h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #eee; /* Add a subtle line below the heading */
-    padding-bottom: 5px;
-
-}
-
-
-
-
-
-.service-category ul {
-    list-style: none;
-    padding: 0; /* Remove default list padding */
-}
-
-
-.service-category li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 30px; /* Add space for icon/bullet */
-}
-
-
-
-.service-category li strong {  /* Style the service name */
-    font-weight: bold;
-
-}
-
-
-
-.service-category li::before {   /* Create the square bullet with ::before pseudo-element */
-    content: '';
+.service-box img{
     display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #a17c30; /* Blue color */
-    position: absolute;
-    left: 0;
-    top: 8px; /* Adjust vertical alignment */
+    width: 10rem;
 }
 
-
-
-/* Responsive Design - Adjust styles for smaller screens */
-@media (max-width: 768px) {
-
-
-    .content-wrapper {
-        padding: 15px;
-    }
-    #services-hero h1 {
-        font-size: 2em; /* Slightly smaller heading */
-    }
-    #services-main h2 {
-        font-size: 1.8em;
-    }
-
-
-    .service-category h3 {
-        font-size: 1.4em;
-    }
-
+.service-box .service-name{
+    width: 50%;
+    text-align: center;
 }
