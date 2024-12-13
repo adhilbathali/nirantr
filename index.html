@@ -10,19 +10,27 @@
     <script src="https://kit.fontawesome.com/3f8621b75f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- navbar -->
-    <nav class="fill">
-        <div class="logo">
-            <img src="Nirantr_Logos/Nirantr_Logo/Nirantr_Logo-02.png" alt="Nirantr Logo">
-        </div>
-        <ul class="nav-links">
-            <li class="nav-link"><a href="./index.html">Home</a></li>
-            <li class="nav-link"><a href="./about-us.html">About Us</a></li>
-            <li class="nav-link"><a href="./services.html">Services</a></li>
-            <li class="nav-link"><a href="./contact-us.html">Contact Us</a></li>
-        </ul>
-    </nav>
+    <div class="nav_container">
+        <nav class="fill">
+            <div class="logo">
+                <img src="Nirantr_Logos/Nirantr_Logo/Nirantr_Logo-02.png" alt="Nirantr Logo">
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="./index.html">Home</a></li>
+                <li class="nav-link"><a href="./about-us.html">About Us</a></li>
+                <li class="nav-link"><a href="./services.html">Services</a></li>
+                <li class="nav-link"><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    
 
     <section class="hero">
         <div class="hero-content">
@@ -43,26 +51,6 @@
             <h2>Who We Are</h2>
             <p>Nirantr is a premier strategic management firm specializing in designing, implementing, and managing strategies that drive business excellence. Our expertise lies in collaborating with C-suite executives to craft solutions that deliver measurable results. From startups to established enterprises, we help businesses become brands by offering continuous support, market-ready strategies, and seamless execution.</p>
         </section>
-        <section id="mission-vision">
-            <h2>Our Mission and Vision</h2>
-            <div class="content">
-                <div class="mission">
-                    <div class="img-placeholder"><img src="./assets/mission.svg" alt="Mission Image" /></div>
-                    <div class="text">
-                        <h3>Mission</h3>
-                        <p>To enable businesses to achieve their true potential by providing innovative, sustainable, and result-driven strategies.</p>
-                    </div>
-                </div>
-                <div class="vision">
-                    <div class="img-placeholder"><img src="./assets/image.svg" alt="Vision Image" /></div>
-                    <div class="text">
-                        <h3>Vision</h3>
-                        <p>To become the most trusted and sought-after strategic partner for businesses worldwide, known for excellence, responsibility, and innovation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <section id="why-choose-us">
             <h2>Why Choose Us?</h2>
             <div class="differentiators">
@@ -166,5 +154,24 @@
 });
 
     </script>
+
+<script>
+    // Select the checkbox input and nav links
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Add event listener to smoothen the transition
+menuToggle.addEventListener('change', function () {
+    if (menuToggle.checked) {
+        // When checked, slide down the menu smoothly
+        navLinks.style.transform = 'translateY(0)';
+    } else {
+        // When unchecked, move the menu back up smoothly
+        navLinks.style.transform = 'translateY(-100%)';
+    }
+});
+
+</script>
+
 </body>
 </html>
