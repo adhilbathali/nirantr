@@ -73,7 +73,10 @@ body{
     padding: 40px;
     border-radius: 8px;
     width: 250px;
+    
 }
+
+
 
 
 
@@ -81,7 +84,7 @@ body{
 
 .mission_container{
     display: flex;
-    height: 100vh;
+    height: 90vh;
     flex-direction: column;
     gap: 70px;
     width: 90%;
@@ -114,7 +117,8 @@ body{
 }
 .mission_text p{
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
+    
 }
 .mission_text h4{
     font-size: 27px;
@@ -144,7 +148,52 @@ body{
     align-items: center;
 }
 .vission_content img{
-    height: 250px;
+    height: 200px;
 }
 
 
+/* why choose us  */
+
+.why_choose_container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.why_choose_container h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.why_card_container{
+    margin-top: 30px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.why_card{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(207, 205, 205);
+    padding: 30px;
+    width: 250px;
+    height: 120px;
+    text-align: center;
+    border-radius: 8px;
+}
+.why_card h4{
+    font-size: 20px;
+ margin: 0px;
+}
+.why_img{
+    border-radius: 50%;
+    height: 60px;
+}
