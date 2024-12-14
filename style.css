@@ -729,9 +729,9 @@ hr{
 }
 
 
-/* para size */
+para size
 p, h4{
-    font-size: 1rem; /* Default for mobile (16px) */
+    font-size: 15px; /* Default for mobile (16px) */
   }
 
 p{
@@ -746,7 +746,7 @@ p{
   
   @media (min-width: 1024px) { /* Desktop */
     p, h4{
-      font-size: 1.25rem; /* 20px */
+      font-size: 18px; /* 20px */
     }
   }
 

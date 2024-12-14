@@ -31,8 +31,34 @@ body{
     width: 50%;
 }
 
+@media (max-width: 480px){
+    .header_container h1 {
+        font-size: 30px;
+        width: 90%;
+        color: white;
+    }
+    .header_container p{
+        width: 90%;
+        font-size: 15px;
+        color: rgb(255, 252, 252);
+    }
+    .header_container{
+        height: 85vh;
+        width: 100%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(56, 56, 56, 0.5)), url('images/businessteam.jpg');
+    }
+    
+
+}
+#why_choose{
+    margin-top: 30px;
+}
+#core{
+    margin-top: 40px;
+}
+
 .who_container{
-    height: 80vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -58,7 +84,7 @@ body{
 }
 .highlights{
     margin:0px auto;
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -75,6 +101,30 @@ body{
     width: 250px;
     
 }
+@media (max-width: 480px){
+    .who_container{
+        height: 100vh;
+    }
+    .who_contents h1{
+        font-size: 28px;
+
+    }
+    .who_contents p{
+        font-size: 15px;
+        width: 90%;
+    }
+    .highlights{
+        width: 100%;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .highlight_cards{
+        width: 200px;
+        height: 100px;
+        padding: 15px;
+    }
+}
+
 
 
 
@@ -84,7 +134,6 @@ body{
 
 .mission_container{
     display: flex;
-    height: 90vh;
     flex-direction: column;
     gap: 70px;
     width: 90%;
@@ -152,10 +201,53 @@ body{
 }
 
 
+@media (max-width: 480px){
+.mission_container {
+    width: 90%;
+    margin-top: 60px;
+}
+.mission_content{
+    width: 100%;
+}
+.mission_container h1{
+    font-size: 30px;
+}
+.vission_content img{
+    height: 80px;
+}
+.mission_content img{
+    height: 140px;
+}
+.mission_text h4{
+    margin: 0px;
+    font-size: 22px;
+}
+.mission_text p{
+    text-align: justify;
+    font-size: 15px;
+    width: 100%;
+}
+.mission_text{
+    width: 100%;
+}
+
+.imgg{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+.vission_content{
+    width: 100%;
+}
+}
+
+
 /* why choose us  */
 
 .why_choose_container{
-    height: 60vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,11 +275,14 @@ body{
     align-items: center;
     justify-content: center;
     border: 1px solid rgb(207, 205, 205);
-    padding: 30px;
-    width: 250px;
-    height: 120px;
+    padding: 5px;
+    width: 280px;
+    height: 240px;
     text-align: center;
     border-radius: 8px;
+}
+.why_card p{
+    width: 100%;
 }
 .why_card h4{
     font-size: 20px;
@@ -198,58 +293,189 @@ body{
     height: 60px;
 }
 
-/* para size */
-p {
-    font-size: 1rem; /* Default for mobile (16px) */
-    line-height: 1.6;
+@media (max-width: 480px){
+  .why_choose_container h1{
+    font-size: 30px;
+  }  
+  .why_card{
+    width: 275px;
   }
-  
-  @media (min-width: 768px) { /* Tablet and above */
-    p {
-      font-size: 1.125rem; /* 18px */
-    }
-  }
-  
-  @media (min-width: 1024px) { /* Desktop */
-    p {
-      font-size: 1.25rem; /* 20px */
-    }
-  }
+}
 
-/* h1 size */
-h1 {
-    font-size: 2rem;
-  }
-  
-  @media (min-width: 768px) { /* Tablet */
-    h1 {
-      font-size: 2.5rem; /* 40px */
-    }
-  }
-  
-  @media (min-width: 1024px) { /* Desktop */
-    h1 {
-      font-size: 3rem; /* 48px */
-    }
-  }
 
-  /* button size */
-  button {
-    font-size: 1rem; /* 16px for mobile */
-    padding: 0.75rem 1.5rem; /* Balanced padding for buttons */
-    text-transform: uppercase;
-    font-weight: bold;
+/* approach */
+
+
+.approach_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.approch_title{
+   
+display: flex;
+align-items: center;
+justify-content: center;
+width: 50%;
+}
+.approch_title h1{
+    display: none;
+}
+.approch_title p{
+    font-size: 23px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+.approach_content{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+
+}
+.approachcontent_left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 20px;
+}
+
+
+.approch_head{
+    /* border: 2px solid rgb(17, 16, 16); */
+    height: 80px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:8px;
+    border-style: dotted;
+    background-color: #ffffff;
+    color: #a17c30;
+}
+
+.approachcontent_right{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    
+}
+
+.approch_head h1{
+    font-size: 1.5rem;
+}
+
+.approach_right_card{
+    width: 200px;
+    height: 80px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 30px;
+    background-color:#a17c30;
+    color: white;
+    
+}
+.approach_right_card h6{
+    font-size: 15px;
+    font-weight: 400;
+}
+.mg1{
+    margin-left: 10px;
+}
+.mg2{
+    margin-left: 50px;
+}
+.mg3{
+    margin-left: 50px;
+}
+.mg4{
+    margin-left: 10px;
+}
+
+@media (max-width: 480px){
+    .approach_container{
+        flex-direction: column;
+        margin: 30px 5px;
     }
-  
-  @media (min-width: 768px) { /* Tablet */
-    button {
-      font-size: 1.125rem; /* 18px */
-      padding: 1rem 2rem; /* Larger padding for tablet */
+    .approch_title{
+        flex-direction: column;
+        width: 100%;
     }
-  }
-  
-  @media (min-width: 1024px) { /* Desktop */
-    button {
-      font-size: 1.25rem; /* 20px */
+    .approch_title p{
+        font-size: 15px;
+
     }
-  }
+    .approch_title h1{
+        display: flex;
+
+    }
+    .approch_head h1{
+        width: 120px;
+        padding: 5px;
+        font-size: 14px;
+    }
+    .approachcontent_left{
+        width: 10%;
+
+    }
+    .approach_right_card{
+        width: 90%;
+    }
+    .approach_right_card{
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid grey;
+        border-radius: 30px;
+        background-color:#a17c30;
+        color: white;
+        
+    }
+    .approach_right_card h6{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .approach_content{
+        display: flex;
+        width: 20%;
+        align-items: center;
+        justify-content: center;
+        
+    
+    }
+    
+.mg1{
+    margin-left: 0px;
+}
+.mg2{
+    margin-left: 0px;
+}
+.mg3{
+    margin-left: 0px;
+}
+.mg4{
+    margin-left: 0px;
+}
+    
+}
+#approach{
+    margin : 60px auto ;
+}
+
+
