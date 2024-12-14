@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nirantr</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .header-overlay {
+            background-color: rgba(0, 0, 0, 0.466);
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            top: 0;
+        }
+
+        .header img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: bottom;
+            display: block;
+        }
+
+        .header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 36px;
+        }
+
+        .form-img-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10% 0;
+
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .contact-info-box {
+            flex: 1 1 30%;
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info-box h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #005F3A;
+        }
+
+        .contact-info-box p {
+            margin: 5px 0;
+        }
+
+        .contact-info-box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #A17C30;
+        }
+
+        .form-section {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            gap: 20px; /* Adds space between the image and form */
+        }
+
+        .image-container {
+            flex: 1 1 40%;
+            max-width: 40%;
+            height: 500px; /* Fixed height for the container */
+            overflow: hidden; /* Ensures the image doesn't exceed the container */
+            border-radius: 5px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container proportionately */
+            border-radius: 5px;
+            object-position: top;
+        }
+
+        .form-container {
+            flex: 1 1 50%;
+            min-width: 300px;
+        }
+
+        .form-container h2 {
+            color: #005F3A;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            background-color: #005F3A;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #003e28;
+        }
+
+        @media (max-width: 768px) {
+            .form-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .image-container {
+                max-width: 100%;
+                height: 200px; /* Adjust for smaller screens */
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/3f8621b75f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="nav_container scrolled">
+        <nav class="fill">
+            <div class="logo">
+                <img src="Nirantr_Logos/Nirantr_Logo/Nirantr_Logo-01.png" alt="Nirantr Logo">
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li class="nav-link"><a href="./index.html">Home</a></li>
+                <li class="nav-link"><a href="./about-us.html">About Us</a></li>
+                <li class="nav-link"><a href="./services.html">Services</a></li>
+                <li class="nav-link"><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <div class="header-overlay"></div>
+        <img src="./images/contact-hero.jpg" alt="Contact Us">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="form-img-container">
+        <!-- Contact Info Section -->
+        <div class="contact-container">
+            <div class="contact-info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h2>Address</h2>
+                <p>Nirantr, STC Pot Market, Secunderabad, 500003</p>
+            </div>
+            <div class="contact-info-box">
+                <i class="fas fa-phone"></i>
+                <h2>Phone</h2>
+                <p>+91 7989504785</p>
+            </div>
+            <div class="contact-info-box">
+                <i class="fas fa-envelope"></i>
+                <h2>Email</h2>
+                <p>info@nirantr.com</p>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="form-section">
+            <div class="image-container">
+                <img src="./images/contact-form.jpg" alt="Contact Us">
+            </div>
+
+            <div class="form-container">
+                <h2>Get in Touch</h2>
+                <form action="" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="query">Query</label>
+                    <textarea id="query" name="query" placeholder="Your Query" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-top-left">
+                <div class="logo">
+                    <img src="./Nirantr_Logos/Nirantr_Logo/Nirantr_Logo-02.png" alt="Nirantr Logo">
+                </div>
+                <div class="cta">
+                    <p>
+                        Your brand deserves the spotlight. Let’s craft a strategy that positions you ahead of the competition. Ready to elevate your market presence?
+                    </p>
+                    <button class="cta-btn">
+                        Let's Talk
+                    </button>
+                </div>
+            </div>
+            <div class="footer-top-right">
+                <div class="footer-top-right-top">
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about-us.html">About Us</a></li>
+                            <li><a href="./services.html">Services</a></li>
+                            <li><a href="./contact-us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>sales@nirantr.com
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>+91 7989504785
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>Nirantr , STC Pot market, Secunderabad, 500003
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div class="social-media">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <p>&copy; 2024 Nirantr. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("#mission-vision .mission, #mission-vision .vision");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = "running";
+            }
+        });
+    });
+
+    elements.forEach((element) => {
+        observer.observe(element);
+    });
+});
+
+    </script>
+
+<script>
+    // Select the checkbox input and nav links
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Add event listener to smoothen the transition
+menuToggle.addEventListener('change', function () {
+    if (menuToggle.checked) {
+        // When checked, slide down the menu smoothly
+        navLinks.style.transform = 'translateY(0)';
+    } else {
+        // When unchecked, move the menu back up smoothly
+        navLinks.style.transform = 'translateY(-100%)';
+    }
+});
+
+</script>
+</body>
+</html>

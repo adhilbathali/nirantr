@@ -3,7 +3,6 @@
 
 body{
     font-family: outfit;
-    height: 200vh;
     position: relative;
     box-sizing: border-box;
     padding: 0;
@@ -11,11 +10,17 @@ body{
     caret-color: transparent;
     position: relative;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: auto;
+    background-color: #f5f5f5;
+}
+
+*{
+    box-sizing: border-box;
 }
 
 /* NAVIGATION */
 .nav_container{
-  background-color: #A17C30;
+  background-color: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -23,7 +28,7 @@ body{
 
 nav {
     width: 90%;
-    background: #A17C30;
+    background-color: #fff;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -79,7 +84,7 @@ div.scrolled {
     width: 0%;
     content: '.';
     color: transparent;
-    background: #bea675;
+    background: gray;
     height: 1px;
   }
   
@@ -95,7 +100,7 @@ div.scrolled {
     transition: all 2s;
   }
   nav.fill ul li a:hover {
-    color: #A17C30;
+    color: #fff;
     z-index: 1;
     transition: all 2s;
   }
@@ -121,7 +126,7 @@ div.scrolled {
     100% {
       width: 100%;
       height: 100%;
-      background: #fff;
+      background: #005F3A;
     }
   }
 
@@ -136,7 +141,7 @@ nav li{
 
 /* General Navbar Styling */
 .nav_container {
-    background-color: #A17C30;
+    background-color: #fff;
     width: 100%;
 }
 
@@ -146,7 +151,7 @@ nav {
     align-items: center;
     padding: 0 20px;
     height: 100px;
-    background: #A17C30;
+    background: #fff;
     position: relative;
 }
 
@@ -170,7 +175,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #005F3A;
     font-weight: 600;
     padding: 10px 15px;
     transition: color 0.3s;
@@ -189,7 +194,7 @@ nav {
 }
 
 .hamburger span {
-    background: #ffffff;
+    background: #A17C30;
     height: 3px;
     width: 30px;
     margin: 5px 0;
@@ -209,7 +214,7 @@ nav {
     top: 80px; /* Initially off-screen */
     left: 0;
     width: 100%;
-    background: #A17C30;
+    background: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     animation: slideDown 0.5s ease-out forwards; /* Use keyframe animation */
@@ -249,7 +254,7 @@ nav {
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
         background: #A17C30;
         position: absolute;
         top: -100%; /* Hidden off-screen initially */
@@ -258,10 +263,14 @@ nav {
         transition: transform 0.3s ease-out; /* Slide down effect */
     }
 
+    .nav_container{
+        width: 100%;
+    }
+
     .nav-links a {
         padding: 15px 20px;
         text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 1px solid #005f3b59;
     }
 
     .menu-toggle:checked ~ .nav-links {
@@ -278,6 +287,16 @@ nav {
 
     .nav-links a {
         padding: 10px 15px;
+    }
+}
+
+@media (max-width:768px) {
+    nav{
+        width: 100%;
+    }
+
+    .header h1{
+        margin-top: 0;
     }
 }
 
@@ -405,32 +424,61 @@ nav {
     }
 }
 
-#who-we-are{
+#know-how, #partner-with-us {
+    color: #333;
+    text-align: center;
+    padding:5vw;
+}
+
+.know-how-icon, .partner-with-us-icon {
+    margin: 30px;
+    width: 100%;
+  }
+
+ .know-how-icon img, .partner-with-us-icon img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .know-how-icon{
+    order: 2;
+  }
+
+  .know-how-description{
+    order: 1;
+  }
+
+.know-how-head, .partner-with-us-head{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 5vw 10vw;
-    color: #333;
+    line-height: 1.6;
 }
 
-#who-we-are h2{
-    font-size: 2rem;
-}
-/* why choose us */
-/* General Styling for the Section */
-#why-choose-us {
-    background-color: #005F3A;
-    color: #ffffff;
-    text-align: center;
-    padding:10vw;
+.our-services-btn, .email-us{
+    border: none;
+    background-color: #A17C30;
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
 }
 
-#why-choose-us h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #A17C30;
-    text-transform: uppercase;
+@media (max-width:1200px) {
+    .know-how-head, .partner-with-us-head{
+        flex-direction: column;
+    }
+    
+    .know-how-icon{
+        order: 1;
+      }
+    
+      .know-how-description{
+        order: 2;
+      }
 }
 
 /* Differentiator Grid Styling */
@@ -469,17 +517,16 @@ nav {
 }
 
 .differentiators p {
-    font-size: 1rem;
     line-height: 1.6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #why-choose-us {
+    #partner-with-us {
         padding: 30px 15px;
     }
 
-    #why-choose-us h2 {
+    #partner-with-us h2 {
         font-size: 2rem;
     }
 
@@ -490,18 +537,14 @@ nav {
     .differentiators h4 {
         font-size: 1.25rem;
     }
-
-    .differentiators p {
-        font-size: 0.9rem;
-    }
 }
 
 @media (max-width: 480px) {
-    #why-choose-us {
+    #partner-with-us {
         padding: 20px 10px;
     }
 
-    #why-choose-us h2 {
+    #partner-with-us h2 {
         font-size: 1.8rem;
     }
 
@@ -511,10 +554,6 @@ nav {
 
     .differentiators h4 {
         font-size: 1rem;
-    }
-
-    .differentiators p {
-        font-size: 0.8rem;
     }
 }
 
@@ -688,3 +727,65 @@ hr{
         font-size: 1.2rem;
     }
 }
+
+
+/* para size */
+p, h4{
+    font-size: 1rem; /* Default for mobile (16px) */
+  }
+
+p{
+    line-height: 1.6;
+}
+  
+  @media (min-width: 768px) { /* Tablet and above */
+    p, h4{
+      font-size: 1.125rem; /* 18px */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    p, h4{
+      font-size: 1.25rem; /* 20px */
+    }
+  }
+
+/* h1 size */
+h1 {
+    font-size: 2rem;
+  }
+  
+  @media (min-width: 768px) { /* Tablet */
+    h1 {
+      font-size: 2.5rem; /* 40px */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    h1 {
+      font-size: 3rem; /* 48px */
+    }
+  }
+
+  /* button size */
+  button {
+    font-size: 1rem; /* 16px for mobile */  
+    padding: 0.75rem 1.5rem; /* Balanced padding for buttons */
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+  
+  @media (min-width: 768px) { /* Tablet */
+    button {
+      font-size: 1.125rem; /* 18px */
+      padding: 1rem 2rem; /* Larger padding for tablet */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    button {
+      font-size: 1.25rem; /* 20px */
+    }
+  }
+  
+  

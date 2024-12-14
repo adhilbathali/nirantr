@@ -197,3 +197,59 @@ body{
     border-radius: 50%;
     height: 60px;
 }
+
+/* para size */
+p {
+    font-size: 1rem; /* Default for mobile (16px) */
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) { /* Tablet and above */
+    p {
+      font-size: 1.125rem; /* 18px */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    p {
+      font-size: 1.25rem; /* 20px */
+    }
+  }
+
+/* h1 size */
+h1 {
+    font-size: 2rem;
+  }
+  
+  @media (min-width: 768px) { /* Tablet */
+    h1 {
+      font-size: 2.5rem; /* 40px */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    h1 {
+      font-size: 3rem; /* 48px */
+    }
+  }
+
+  /* button size */
+  button {
+    font-size: 1rem; /* 16px for mobile */
+    padding: 0.75rem 1.5rem; /* Balanced padding for buttons */
+    text-transform: uppercase;
+    font-weight: bold;
+    }
+  
+  @media (min-width: 768px) { /* Tablet */
+    button {
+      font-size: 1.125rem; /* 18px */
+      padding: 1rem 2rem; /* Larger padding for tablet */
+    }
+  }
+  
+  @media (min-width: 1024px) { /* Desktop */
+    button {
+      font-size: 1.25rem; /* 20px */
+    }
+  }
