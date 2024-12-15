@@ -786,7 +786,6 @@ h1 {
   button {
     font-size: 1rem; /* 16px for mobile */  
     padding: 0.75rem 1.5rem; /* Balanced padding for buttons */
-    text-transform: uppercase;
     font-weight: bold;
     }
 
@@ -803,7 +802,7 @@ h1 {
   
   @media (min-width: 1024px) { /* Desktop */
     button {
-      font-size: 1.25rem; /* 20px */
+      font-size: 1.125rem; /* 18px */
     }
   }
   
