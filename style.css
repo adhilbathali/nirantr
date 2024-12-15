@@ -12,7 +12,9 @@ body{
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: auto;
     background-color: #f5f5f5;
+    padding-top: 80px;
 }
+
 
 *{
     box-sizing: border-box;
@@ -21,7 +23,7 @@ body{
 /* NAVIGATION */
 .nav_container{
   background-color: #fff;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
 }
@@ -786,6 +788,10 @@ h1 {
     padding: 0.75rem 1.5rem; /* Balanced padding for buttons */
     text-transform: uppercase;
     font-weight: bold;
+    }
+
+    button:hover{
+        opacity: 0.9;
     }
   
   @media (min-width: 768px) { /* Tablet */
