@@ -116,6 +116,7 @@ header{
 
 .service-name p{
     color: #333;
+    font-size: 18px;
 }
 
 .service-name h2{
@@ -350,7 +351,7 @@ p {
   
   @media (min-width: 1024px) { /* Desktop */
     p {
-      font-size: 1.25rem; /* 20px */
+      font-size: 1.125rem; /* 18px */
     }
   }
 
