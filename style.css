@@ -315,6 +315,14 @@ nav {
     overflow: hidden;
 }
 
+@media (max-width:700px) {
+    .hero{
+        justify-content: center;
+        height: fit-content;
+    }
+    
+}
+
 .hero-content {
     max-width: 50vw;
     display: flex;
@@ -402,6 +410,7 @@ nav {
     .hero {
         flex-direction: column;
         text-align: center;
+        max-height: fit-content;
     }
 
     .hero-content {
@@ -409,6 +418,8 @@ nav {
         margin-bottom: 2rem;
         padding-bottom: 0;
         margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-image {
@@ -428,13 +439,35 @@ nav {
 
 @media (max-width:500px) {
     .hero-content{
-        padding-top: 10px;
+        padding-top: 15%;
         z-index: 1;
     }
 
     .hero-content h1{
         padding-top: 0;
         margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .hero-image{
+        display: block;
+        /* justify-content: flex-end;
+        align-items: last baseline;
+        align-self: last baseline; */
+        height: 30vh;
+        overflow: hidden;
+        max-width: 100vw;
+        width: 100vw;
+        padding-top: 20px;
+    }
+
+    .hero-image img{
+        object-fit: cover;
+        object-position: 0% 25%;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        display: block;
     }
     
 }
