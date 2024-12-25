@@ -6,10 +6,15 @@ body{
     padding: 0;
     margin: 0;
     caret-color: transparent;
+    color: #333;
 }
 
 html{
     scroll-behavior: smooth;
+}
+
+section{
+    min-height: 50vh;
 }
 
 .header_container{
@@ -18,12 +23,38 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image:linear-gradient(rgba(211, 208, 208, 0.5), rgba(255, 255, 255, 0.5)), url('images/gemini.jpeg');
+    background-image: url('images/about-hero.jpeg');
     background-size: cover;
     background-position:bottom;
-
-
+    color: #333;
 }
+
+.head-content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+
+@media (min-width:600px) {
+    .head-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+        width: 80%;
+        background-color: #ffffff5e;
+        padding: 3rem;
+        backdrop-filter: blur(10px);
+    }
+    
+}
+
 .header_container h1{
     font-size: 50px;
     width: 70%;
@@ -33,7 +64,6 @@ html{
 .header_container p{
     margin-top: 50px;
     font-size: 20px;
-    width: 50%;
 }
 
 @media (max-width: 480px){
@@ -42,19 +72,36 @@ html{
         width: 90%;
         color: white;
     }
+
+    .head-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .header_container p{
         width: 90%;
+        margin-top: 0;
         font-size: 15px;
         color: rgb(255, 252, 252);
     }
     .header_container{
         height: 85vh;
         width: 100%;
-        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(56, 56, 56, 0.5)), url('images/businessteam.jpg');
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(56, 56, 56, 0.5)), url('images/about-hero.jpeg');
     }
     
 
 }
+
+@media (min-width:768px) {
+    .section-sub-heading{
+        font-size: 30px;
+    }
+    
+}
+
 #why_choose{
     margin-top: 30px;
 }
@@ -232,7 +279,7 @@ html{
     font-size: 22px;
 }
 .mission_text p{
-    text-align: justify;
+    text-align: center;
     font-size: 15px;
     width: 100%;
 }
@@ -284,14 +331,23 @@ html{
     gap: 30px;
     flex-wrap: wrap;
 }
+
+@media (min-width:480px) {
+    .why_card_container{
+        padding: 5rem;
+    }
+    
+}
+
 .why_card{
    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(207, 205, 205);
-    padding: 5px;
+    border: 1px solid #a17c30;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
     width: 280px;
     height: 240px;
     text-align: center;
@@ -321,6 +377,57 @@ html{
     width: 275px;
   }
 }
+
+
+/* let's connect */
+
+.lets-connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(56, 56, 56, 0.5)), url('images/about-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* White text color */
+    padding: 60px 20px;
+    text-align: left;
+  }
+  
+  .lets-connect .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .lets-connect h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; /* Theme color 1 */
+  }
+  
+  .lets-connect p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  .cta-btn-connect{
+    background-color: #a17c30;
+    text-decoration: none;
+    color: white;
+    height: fit-content;
+    padding: 0.8rem;
+    font-weight: 500;
+    border-radius: 5px;
+    max-width: max-content;
+  }
+
+  .cta-btn-connect:hover{
+    background-color: #fff;
+    color: black;
+    border: 2px #005F3A;
+  }
+  
+
+  
 
 
 /* approach */
