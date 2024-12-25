@@ -182,6 +182,8 @@ section {
     gap: 20px;
     width: 100%;
     margin: 5rem 0;
+    justify-content: center;
+    align-content: center;
 }
 
 .service-card {
@@ -194,14 +196,21 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     transition: all 0.3s;
+    overflow-y: hidden;
+    max-height: 150px;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.service-card h3{
+    height: fit-content;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     background-color: #f5f5f5;
     color: #005F3A;
     border: 2px solid #005F3A;
+    max-height: 300px;
 }
 
 .service-card strong {
@@ -213,6 +222,14 @@ section {
 .service-card p {
     font-size: 1rem;
     margin-top: 2rem;
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.service-card:hover p{
+    max-height: 200px;
 }
 
 /* Image placeholder */

@@ -303,6 +303,115 @@ nav {
 }
 
 
+
+@media (min-width:768px) {
+    .dropdown:hover .services-dropdown{
+        display: grid;
+    
+    }
+
+        /* Default state for the icon */
+    .nav-link.dropdown i {
+        transform: rotate(0deg); /* Default position */
+        transition: transform 0.5s ease-out; /* Smooth transition */
+        margin-left: 10px;
+    }
+
+    /* Rotate the icon on hover */
+    .nav-link.dropdown:hover i {
+        transform: rotate(180deg); /* Rotate to desired angle */
+    }
+
+    .services-dropdown{
+        top: 38px;
+        position: absolute;
+        display: none;
+        grid-template-columns: 10rem 10rem;
+        color: #A17C30;
+        background-color: white;
+        box-shadow: -2px -2px 8px 0px rgba(0, 0, 0, 0.2);
+        padding: 20%;
+        gap: 2rem;
+        transform: translateX(-35%);
+        border-radius: 5px;
+    }
+
+    .services-dropdown a{
+        all: unset;
+        cursor: pointer;
+    }
+    .category{
+        color: #005F3A;
+        text-align: left;
+    }
+
+    .sub-service-a:hover .category{
+        color: #A17C30;
+    }
+
+    .sub-service-a::after{
+        display: none;
+    }
+
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+@media (max-width:767px) {
+    .services-dropdown{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.8s ease-in-out;
+        width: 80%;
+        margin-left: 10%;
+        text-align: left;
+    }
+
+    .services-dropdown a{
+        all: unset;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    .sub-service-a{
+        width:fit-content
+    }
+
+    .sub-service-a::after{
+        display: none;
+    }
+
+    .show {
+        max-height: 300px; /* Adjust this height to fit your dropdown content */
+        padding: 1rem;
+        padding-left: 0;
+      }
+
+      .rotate {
+        transform: rotate(180deg);
+        transition: all 0.8s ease-out;
+      }
+
+      .rotate-back{
+        transform: rotate(0deg);
+        transition: all 0.8s ease-out;
+      }
+
+    .category{
+        padding: 7px;
+        color: #005F3A;    }
+
+    .fa-caret-down{
+        margin-left: 10px;
+        transition: all 0.5 ease-out;
+    }
+}
+
+
+
 /* Hero Section */
 .hero {
     display: flex;
