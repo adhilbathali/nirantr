@@ -40,7 +40,7 @@ section{
 
 
 
-@media (min-width:600px) {
+@media (min-width:480px) {
     .head-content{
         display: flex;
         align-items: center;
@@ -51,6 +51,7 @@ section{
         background-color: #ffffff5e;
         padding: 3rem;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
     
 }
@@ -189,7 +190,6 @@ section{
     display: flex;
     flex-direction: column;
     gap: 70px;
-    width: 90%;
     margin: 10px auto;
     padding: 10px;
 
@@ -202,37 +202,43 @@ section{
     display: flex;
     width: 80%;
     margin: 0px auto;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.452);
+
 }
 .mission_content img{
     height: 250px;
 }
 .mission_text{
-    width: 50%;
+    width: 80%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 2rem;
 }
 .mission_text p{
     width: 100%;
     font-size: 18px;
+    text-align: left;
     
 }
 .mission_text h4{
     font-size: 27px;
 }
 .imgg{
-    width: 50%;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .mission_text h4{
-    text-align: center;
+    text-align: left;
 }
 .vission_content{
     display: flex;
@@ -248,9 +254,18 @@ section{
     justify-content: space-around;
     text-align: center;
     align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.452);
 }
 .vission_content img{
     height: 200px;
+    margin-right: 2rem;
+}
+
+.mission_content, .vission_content{
+    background-color: #fff;
+    color: #333;
 }
 
 
@@ -296,6 +311,10 @@ section{
 }
 .vission_content{
     width: 100%;
+}
+
+.mission_content, .vission_content{
+    flex-direction: column;
 }
 }
 

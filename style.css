@@ -307,6 +307,7 @@ nav {
 @media (min-width:768px) {
     .dropdown:hover .services-dropdown{
         display: grid;
+        z-index: 1000;
     
     }
 
@@ -594,7 +595,7 @@ nav {
 
  .know-how-icon img, .partner-with-us-icon img {
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -615,6 +616,7 @@ nav {
     line-height: 1.6;
 }
 
+
 .our-services-btn, .email-us{
     border: none;
     background-color: #A17C30;
@@ -624,10 +626,31 @@ nav {
     border-radius: 5px;
 }
 
+@media (min-width:1200px) {
+    .know-how-head{
+        text-align: left;
+    }
+
+    .partner-with-us-head{
+        text-align: right;
+    }
+
+    .know-how-head p, .partner-with-us-description p{
+        line-height: 2;
+    }
+
+    .know-how-description, .know-how-icon, .partner-with-us-description, .partner-with-us-icon{
+        width: 50%;
+    }
+    
+}
+
 @media (max-width:1200px) {
     .know-how-head, .partner-with-us-head{
         flex-direction: column;
     }
+
+    
     
     .know-how-icon{
         order: 1;
