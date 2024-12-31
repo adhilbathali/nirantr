@@ -530,6 +530,7 @@ section{
 
   section#principles{
     padding: 3rem;
+    padding-top: 0;
   }
 
   @media (min-width:768px) {
