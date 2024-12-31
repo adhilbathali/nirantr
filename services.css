@@ -37,6 +37,98 @@ header{
     text-align: center;
 }
 
+/* steps */
+.service-steps-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 2rem;
+}
+
+.service-step-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #A17C30;
+    text-align: left;
+    border-radius: 8px;
+    color: white;
+    padding: 2rem;
+    box-shadow: inset -3px -3px 3px 3px #61666471; 
+}
+
+.service-step-card p{
+    width: 100%;
+    text-align: left;
+}
+
+.service-step-card img{
+    height: 60px;
+    margin-right: 20px;
+}
+
+#service-step1 img{
+    animation: icon-shaker 6s ease-in-out 0s infinite normal both;
+}
+
+#service-step2 img{
+    animation: icon-shaker 6s ease-in-out 2s infinite normal both;
+}
+
+#service-step3 img{
+    animation: icon-shaker 6s ease-in-out 4s infinite normal both;
+}
+
+@keyframes icon-shaker {
+    10%{
+        transform: rotate(20deg);
+    }
+    20%{
+        transform: rotate(-20deg);
+    }
+    30%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.service-step-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+    .service-step-card{
+        padding: 2rem 1rem;
+    }
+
+
+    .service-step-card h3{
+        text-align: center;
+        margin: 0;
+    }
+
+    .service-step-card h2{
+        text-align: center;
+    }
+
+    .service-step-card img{
+        margin: 0;
+    }
+
+    .service-step-heading{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+}
+
 .services-boxes-container{
     display: grid;
     padding: 5rem;
