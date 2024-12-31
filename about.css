@@ -325,12 +325,11 @@ section{
 
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
 
 }
 .why_choose_container p{
-    margin-top: 20px;
     line-height: 30px;
     font-size: 18px;
     width: 70%;
@@ -338,7 +337,17 @@ section{
 }
 .why_choose_container h1{
     font-size: 30px;
-    text-align: center;
+}
+
+.why_choose_container h3{
+    margin: 0;
+    text-align: left;
+}
+
+@media (min-width:1200px) {
+    .why_choose_container p{
+        line-height: 2;
+    }
 }
 
 .why_card_container{
@@ -444,6 +453,91 @@ section{
     color: black;
     border: 2px #005F3A;
   }
+
+
+  /* core values */
+  .core-value-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .core-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .core-card{
+    border: 1px solid #a17c30;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+.core-value-container h1{
+    font-size: 30px;
+}
+
+.core-value-container h4{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+  @media (min-width:768px) {
+    .core-card-container{
+        padding: 5rem;
+    }
+
+    .core-card{
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .core-card p{
+        line-height: 1.8;
+    }
+
+    .core-card-container{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      }
+    
+  }
+
+
+  /* principles */
+  .principles-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .principles-container h1{
+    font-size: 30px;
+  }
+
+  .principles-card-container h4{
+    font-size: 20px;
+  }
+
+  .principles-card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+
+  section#principles{
+    padding: 3rem;
+  }
+
+  @media (min-width:768px) {
+    .principles-card-container{
+        padding: 5rem;
+    }
+    
+  }
   
 
   
@@ -452,7 +546,7 @@ section{
 /* approach */
 
 
-.approach_container{
+/* .approach_container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -493,9 +587,8 @@ width: 50%;
     margin-right: 20px;
 }
 
-
-.approch_head{
-    /* border: 2px solid rgb(17, 16, 16); */
+ .approch_head{
+    border: 2px solid rgb(17, 16, 16);
     height: 80px;
     width: 200px;
     text-align: center;
@@ -623,6 +716,6 @@ width: 50%;
 }
 #approach{
     margin : 60px auto ;
-}
+} */
 
 
