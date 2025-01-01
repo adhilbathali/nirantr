@@ -58,6 +58,16 @@ header{
     box-shadow: inset -3px -3px 3px 3px #61666471; 
 }
 
+.svg-icon svg{
+    height: 50px;
+    fill: #A17C30;
+}
+
+.digital-icon{
+    stroke: #A17C30;
+    stroke-width: 15;
+}
+
 .service-step-card p{
     width: 100%;
     text-align: left;
