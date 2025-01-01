@@ -28,7 +28,7 @@ header{
 }
 
 .servies-heading{
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .service-header p{
@@ -236,6 +236,13 @@ button.learn-more:hover{
 }
 
 /* General Service Section */
+
+.main-service-sub-heading{
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
 section {
     display: flex;
     flex-direction: column;
@@ -252,7 +259,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     padding-top: 2rem;
 }
 
@@ -470,6 +477,67 @@ section {
     text-align: center;
     z-index: 2; /* Ensure heading is on top */
     margin: 0;
+}
+
+.sub-content-desktop{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.sub-content-reveal{
+    max-height: 500px;
+}
+
+.divider-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider-box hr{
+    width: 80%;
+    margin: 0;
+}
+
+/* extended capabalities */
+.extended-capabilities{
+    padding: 0 2rem;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(56, 56, 56, 0.5)), url('images/extended-nirantir.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* White text color */
+    padding: 60px 20px;
+    text-align: left;
+}
+
+section#extended-capabilities{
+    padding: 0;
+}
+
+.extended-capabilities h2{
+    font-size: 35px;
+}
+
+.extended-capabilities p{
+    margin: 3rem 0;
+}
+
+@media (min-width:768px) {
+    .extended-capabilities{
+        padding: 8rem;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    .extended-capabilities p{
+        line-height: 2;
+    }
+    
 }
 
 /* para size */

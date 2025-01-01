@@ -327,14 +327,15 @@ nav {
         top: 38px;
         position: absolute;
         display: none;
-        grid-template-columns: 10rem 10rem;
+        grid-template-columns: 12rem 12rem;
         color: #A17C30;
         background-color: white;
         box-shadow: -2px -2px 8px 0px rgba(0, 0, 0, 0.2);
-        padding: 20%;
+        padding: 25%;
+        padding-bottom: 30%;
         gap: 2rem;
         transform: translateX(-35%);
-        border-radius: 5px;
+        border-radius: 8px;
     }
 
     .services-dropdown a{
