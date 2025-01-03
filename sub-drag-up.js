@@ -6,29 +6,33 @@ const dragUp = (subContent, subContentContainer, clickedSection, serviceCard)=>{
         if(serviceCard.classList.contains('service-card-contrast')){
             subContentContainer.classList.add('sub-content-drag-up')
             serviceCard.parentNode.insertBefore(subContentContainer, serviceCard.nextSibling)
-            if(flag){
-                subContentContainer.scrollIntoView({
-                    behavior:'smooth',
-                    block:'center'
-                })
-            }
-    
-            flag = false
-    
+            serviceCard.scrollIntoView({
+                behavior:'smooth',
+                block:'start'
+            })
+            setTimeout(()=>{
+                window.scrollBy({
+                    top: -120, // Amount to scroll vertically (positive for down, negative for up)
+                    behavior: 'smooth' // Smooth scrolling
+                  });
+            },500)           
         }
         else{
             subContentContainer.classList.remove('sub-content-drag-up')
+            const cardContainer = clickedSection.querySelector('.card-container')
             setTimeout(() => {
-                const cardContainer = clickedSection.querySelector('.card-container')
                 cardContainer.parentNode.insertBefore(subContentContainer, cardContainer.nextSibling)
-              }, 800)
-            clickedSection.scrollIntoView(
+              }, 450)
+            cardContainer.scrollIntoView(
                 {
                     behavior:'smooth',
-                    block:'center'
+                    block:'start'
                 }
             )
-            flag = true
+            window.scrollBy({
+                top: 100, // Amount to scroll vertically (positive for down, negative for up)
+                behavior: 'smooth' // Smooth scrolling
+              });           
         }
         return
     }

@@ -495,11 +495,17 @@ section {
 }
 
 @media (min-width:828px) {
+
+    .service-card p{
+        display: none;
+    }
+
     .sub-content-desktop p{
         line-height: 2;
     }
 
     .sub-content-desktop {
+        height: 0;
         max-height: 0;
         overflow: hidden;
         width: 100vw;
@@ -527,6 +533,7 @@ section {
       }
       
       .sub-content-drag-up {
+        height: fit-content;
         max-height: 1000px;
         padding: 3rem; /* Expanded padding */
       }
@@ -534,6 +541,7 @@ section {
       .sub-content-drag-up p {
         margin: 0; /* Ensure no unnecessary margin that affects height */
       }
+
       
     
 }
@@ -566,7 +574,8 @@ section {
       
       .sub-content-desktop p {
         text-align: left;
-        padding: 2rem;
+        padding: 1.6rem;
+        text-align: justify;
         backdrop-filter: blur(10px);
         color: white;
       }
