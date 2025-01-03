@@ -258,7 +258,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10vh;
     box-sizing: border-box;
     
 }
@@ -288,7 +287,7 @@ section {
 /* Service Cards */
 .card-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     width: 100%;
     margin: 5rem 0;
@@ -302,19 +301,29 @@ section {
     }
 }
 
-.service-card {
-    position: relative;
+.service-card { 
     background-color: #005F3A;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 3px;
+    padding: 5px 20px;
+    border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     transition: all 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    border: 2px solid #005F3A;
+    transition: background-color 0.3s ease-in;
 }
+
+.service-card h3{
+    text-align: center;
+}
+
+/* .service-card h3{
+    text-align: center;
+} */
 
 @keyframes card-motion {
     0%{
@@ -360,10 +369,6 @@ section {
     display: flex;
     transition: max-height 0.8s ease-in-out;
 } */
-
-.service-card p{
-    display: none;
-}
 
 /* .service-card:hover p{
     max-height: 200px;
@@ -489,15 +494,106 @@ section {
     margin: 0;
 }
 
-.sub-content-desktop{
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
+@media (min-width:828px) {
+    .sub-content-desktop p{
+        line-height: 2;
+    }
+
+    .sub-content-desktop {
+        max-height: 0;
+        overflow: hidden;
+        width: 100vw;
+        background-image: url("./images/dragUp-bg.svg");
+        background-size: cover;
+        background-position: bottom;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, padding-left 0s;
+      }
+      
+      .sub-content-desktop p {
+        text-align: left;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        color: white;
+      }
+      
+      .service-card-contrast {
+        background-color: #fff;
+        color: #005F3A;
+      }
+      
+      .sub-content-drag-up {
+        max-height: 1000px;
+        padding: 3rem; /* Expanded padding */
+      }
+      
+      .sub-content-drag-up p {
+        margin: 0; /* Ensure no unnecessary margin that affects height */
+      }
+      
+    
 }
 
-.sub-content-reveal{
-    max-height: 500px;
+@media (max-width:828px) {
+
+    .service-card p{
+        display: none;
+    }
+
+
+    .sub-content-desktop p{
+        line-height: 2;
+    }
+
+    .sub-content-desktop {
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        background-image: url("./images/dragUp-bg.svg");
+        background-size: cover;
+        background-position: bottom;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out, padding-left 0s;
+      }
+      
+      .sub-content-desktop p {
+        text-align: left;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        color: white;
+      }
+      
+      .service-card-contrast {
+        background-color: #fff;
+        color: #005F3A;
+      }
+      
+      .sub-content-drag-up {
+        max-height: 1000px;
+        padding: 3rem; /* Expanded padding */
+      }
+      
+      .sub-content-drag-up p {
+        margin: 0; /* Ensure no unnecessary margin that affects height */
+      }
+    
 }
+
+@media (max-width:750px) {
+    .sub-content-drag-up{
+        padding: 0;
+    }
+    
+}
+
 
 .divider-box{
     display: flex;
