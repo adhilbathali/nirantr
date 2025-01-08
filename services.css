@@ -28,7 +28,86 @@ header{
 }
 
 .servies-heading{
-    font-size: 50px;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.extended-cap-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+@media (max-width:768px) {
+    .extended-cap-link p{
+    text-align: left;
+    }
+
+    .extended-cap-link{
+        padding: 1.7rem;
+    }
+
+
+    
+}
+
+.extended-cap-link .extended-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    padding-top: 0;
+    align-items:first baseline;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.514)), url('./images/extended-nirantir.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.extended-cap-link a{
+    background-color: white;
+    padding: 0.6rem 1.125rem;
+    color: #A17C30;
+    border-radius: 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.15s;
+}
+
+.extended-cap-link a:hover{
+    background-color: #A17C30;
+    color: white;
+}
+
+@media (min-width:768px) {
+    .extended-cap-link{
+        padding: 0rem 5rem 3rem 5rem;
+    }
+
+    .extended-cap-link .extended-inner{
+        padding: 3rem;
+    }
+
+    .extended-cap-link .extended-inner p{
+        line-height: 1.6;
+    }
+
+    .extended-cap-link h2{
+        font-size: 30px;
+    }
+    
+}
+
+
+@media (min-width:768px) {
+    .servies-heading{
+        font-size: 50px;
+    }
+    
 }
 
 .service-header p{
@@ -176,6 +255,7 @@ header{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         padding-left: 6%;
         padding-right: 6%;
+        padding-bottom: 8%;
     }
 
     header .service-header{
